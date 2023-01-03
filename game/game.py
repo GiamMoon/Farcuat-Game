@@ -192,7 +192,7 @@ class Game():
         self.mostrar_texto(self.formato_nivel(),40,NEGRO, 90,TEXTO_POSY)
 
         if not self.jugando:
-            self.mostrar_texto("Perdiste",55,NEGRO, ANCHO//2,200)
+            self.mostrar_texto("Perdiste",52,NEGRO, ANCHO//2,200)
             self.mostrar_texto("Presiona E para comenzar de nuevo",40,NEGRO, ANCHO//2,100)
             
 
