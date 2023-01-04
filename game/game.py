@@ -87,7 +87,7 @@ class Game():
             self.generar_monedas()    
 
     def generar_monedas(self):
-        ultima_posicion = ANCHO +100
+        ultima_posicion = ANCHO +120
         for c in range(0,MAXIMO_MONEDAS):
             pos_x = random.randrange(ultima_posicion+180, ultima_posicion+300)
             moneda = Moneda(pos_x,270,4.5+0.5,self.dirrectorio_imagenenes)
