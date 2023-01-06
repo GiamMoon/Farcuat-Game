@@ -71,4 +71,12 @@ class Jugador(pygame.sprite.Sprite):
     def parar(self):
         self.jugando = False
 
+    def seleccionar(self):
+        tecla = pygame.key.get_pressed()
+        if tecla[pygame.K_w]:
+            print("tecla 1")    
+        if tecla[pygame.K_s]:
+            print("tecla 2")    
+    
+
         
