@@ -26,6 +26,7 @@ class Game():
         self.directorio_sonidos = os.path.join(self.directorio,"sounds") 
 
         self.dirrectorio_imagenenes = os.path.join(self.directorio,"imagenes")
+        
        
 
     def iniciar(self):
@@ -68,10 +69,11 @@ class Game():
     def generar_paredes(self):
 
         ultima_posicion = ANCHO +150
+        
 
         if not len(self.paredes) > 0:
 
-            for w in range(0,MAXIMO_PAREDES):
+            for w in range(0,10+self.niveles):
 
                 left = random.randrange(ultima_posicion +200,ultima_posicion+400)
                 pared = Pared(left, self.plataforma.rect.top,5+self.niveles,self.dirrectorio_imagenenes)
@@ -88,7 +90,7 @@ class Game():
 
     def generar_monedas(self):
         ultima_posicion = ANCHO +120
-        for c in range(0,MAXIMO_MONEDAS):
+        for c in range(0,20-self.niveles):
             pos_x = random.randrange(ultima_posicion+180, ultima_posicion+300)
             moneda = Moneda(pos_x,270,4.5+0.5,self.dirrectorio_imagenenes)
             ultima_posicion = moneda.rect.right

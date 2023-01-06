@@ -12,7 +12,7 @@ class Pared(pygame.sprite.Sprite):
         self.rect.bottom = bottom
     
         self.velocidad = velocidad
-
+        
         self.rect_top = pygame.Rect(self.rect.x,self.rect.y,self.rect.width,1)
 
     def update(self):
