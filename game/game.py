@@ -107,7 +107,6 @@ class Game():
             
 
     def eventos(self):
-        
         for evento in pygame.event.get():
             if evento.type == pygame.QUIT:
                 self.ejecutando = False
@@ -118,6 +117,7 @@ class Game():
 
         if tecla[pygame.K_SPACE]:
             self.jugador.salto()  
+
         if tecla[pygame.K_e] and not self.jugando:
             self.nuevo()     
 
@@ -207,7 +207,6 @@ class Game():
         self.ventana.blit(texto,rectangulo) 
 
     def menu(self):
-        
         self.fondo2 = pygame.image.load(os.path.join(self.dirrectorio_imagenenes,"menuimagen.jpg"))
         self.ventana.blit(self.fondo2,(0,0))
         pygame.display.flip()
@@ -217,7 +216,6 @@ class Game():
 
     def esperar(self):
         esperar = True 
-        self.jugador.seleccionar()
         musicamenu = pygame.mixer.Sound(os.path.join(self.directorio_sonidos,"musicamenu.wav"))
         musicamenu.play(-1)
         musicamenu.set_volume(0.5)
